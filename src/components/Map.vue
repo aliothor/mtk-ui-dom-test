@@ -2,7 +2,7 @@
  * @Author: pluto
  * @Date: 2022-04-07 14:24:04
  * @LastEditors: pluto
- * @LastEditTime: 2022-04-07 14:52:17
+ * @LastEditTime: 2022-04-07 15:06:16
  * @Description: 地图组件
  * 
 -->
@@ -16,6 +16,7 @@ import PopupSlot from "./PopupSlot.vue";
 const popupRef = ref(null);
 const popupTempRef = ref(null);
 
+const activeKey = ref("1");
 //默认不显示Popup组件
 const showPopup = ref(false);
 
@@ -33,7 +34,6 @@ onMounted(() => {
 
   var layer = new maptalks.VectorLayer("vector").addTo(map);
   var marker = new maptalks.Marker([-0.113049, 51.49856]).addTo(layer);
-
 
   //使用vue3 teleport特性
   let divContent = document.getElementById("popup-target");
@@ -62,11 +62,28 @@ onMounted(() => {
   <teleport to="#popup-target">
     <Popup ref="popupRef" v-show="showPopup" />
   </teleport>
-  
+
   <PopupSlot ref="popupTempRef">
-    <template #header>标题区域</template>
-    <template #default>内容区域</template>
-    <template #footer>底部区域</template>
+    <template #header>
+      <a-tabs v-model:activeKey="activeKey">
+        <a-tab-pane key="1" tab="Tab 1">Content of Tab Pane 1</a-tab-pane>
+        <a-tab-pane key="2" tab="Tab 2" force-render>Content of Tab Pane 2</a-tab-pane>
+        <a-tab-pane key="3" tab="Tab 3">Content of Tab Pane 3</a-tab-pane>
+      </a-tabs></template
+    >
+    <template #default>
+      <div>
+        <a-button type="primary">Primary Button</a-button>
+        <a-button>Default Button</a-button>
+        <a-button type="dashed">Dashed Button</a-button>
+        <a-button type="text">Text Button</a-button>
+        <a-button type="link">Link Button</a-button>
+      </div>
+    </template>
+    <template #footer>
+      <a-avatar src="https://joeschmoe.io/api/v1/random" />
+      <a-avatar style="color: #f56a00; background-color: #fde3cf">U</a-avatar>
+    </template>
   </PopupSlot>
   <div id="map"></div>
 </template>

@@ -1,4 +1,17 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+/*
+ * @Author: pluto
+ * @Date: 2022-04-07 14:24:04
+ * @LastEditors: pluto
+ * @LastEditTime: 2022-04-07 15:02:12
+ * @Description: 
+ * 
+ */
+import { createApp } from "vue";
+import App from "./App.vue";
+import "ant-design-vue/dist/antd.css";
+import Antd from "ant-design-vue";
 
-createApp(App).mount('#app')
+const app = createApp(App);
+
+app.use(Antd);
+app.mount("#app");

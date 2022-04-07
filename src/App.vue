@@ -2,7 +2,7 @@
  * @Author: pluto
  * @Date: 2022-04-07 14:24:04
  * @LastEditors: pluto
- * @LastEditTime: 2022-04-07 14:52:03
+ * @LastEditTime: 2022-04-07 15:11:07
  * @Description: 
  * 
 -->
@@ -30,5 +30,9 @@ import Map from "./components/Map.vue";
 * {
   margin: 0;
   padding: 0;
+}
+
+.maptalks-close{
+  z-index: 99;
 }
 </style>
