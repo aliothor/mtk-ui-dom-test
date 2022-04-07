@@ -2,7 +2,7 @@
  * @Author: pluto
  * @Date: 2022-04-07 14:23:44
  * @LastEditors: pluto
- * @LastEditTime: 2022-04-07 14:43:03
+ * @LastEditTime: 2022-04-07 14:45:30
  * @Description:
  *
 -->
@@ -16,4 +16,4 @@ pnpm i
 pnpm run dev
 ```
 
-[项目预览地址](https://pluto369.github.io/mtk-ui-dom-test/)
+[项目预览地址](https://pluto369.github.io/mtk-ui-dom-test)
