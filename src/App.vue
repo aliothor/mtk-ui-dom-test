@@ -1,13 +1,20 @@
-
+<!--
+ * @Author: pluto
+ * @Date: 2022-04-07 14:24:04
+ * @LastEditors: pluto
+ * @LastEditTime: 2022-04-07 14:52:03
+ * @Description: 
+ * 
+-->
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import Map from "./components/Map.vue";
 </script>
 
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <Map msg="Hello Vue 3 + Vite" />
 </template>
 
 <style>
@@ -20,7 +27,7 @@ import HelloWorld from './components/HelloWorld.vue'
   margin-top: 60px;
 } */
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
